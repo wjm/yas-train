@@ -1,6 +1,6 @@
 config = {
     "height": 32,
-    "train_width": 384,
+    "train_width": 960,
     "batch_size": 32,
     "epoch": 10,
     "print_per": 100,
@@ -13,7 +13,7 @@ config = {
     "pretrain_name": "chs_all.pt",
 
     # Set according to your CPU
-    "dataloader_workers": 4,
+    "dataloader_workers": 16,
     # Generate data online for train/val
     "online_train": False,
     "online_val": False,

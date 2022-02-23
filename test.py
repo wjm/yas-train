@@ -7,6 +7,6 @@ net = MobileNetV3Small(512)
 # net = MobileNetV2()
 net.eval()
 
-x = torch.randn(3, 3, 32, 384)
+x = torch.randn(3, 3, 32, 960)
 y = net(x)
 print(y.size())

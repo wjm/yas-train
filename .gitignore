@@ -4,3 +4,6 @@ samples/
 .idea/
 __pycache__/
 **/__pacache__/
+*.ipynb
+.vscode/
+test.txt

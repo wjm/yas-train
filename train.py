@@ -54,6 +54,7 @@ def validate(net, validate_loader):
 
 
 def train():
+    torch.multiprocessing.freeze_support()
     net = Model(len(index_to_word)).to(device)
     if config["pretrain"]:
         net.load_state_dict(torch.load(f"models/{config['pretrain_name']}"))
@@ -68,8 +69,8 @@ def train():
             ])], p=0.5),
 
         transforms.RandomApply([
-            transforms.RandomCrop(size=(31, 383)),
-            transforms.Resize((32, 384)),
+            transforms.RandomCrop(size=(31, 959)),
+            transforms.Resize((32, 960)),
             ], p=0.5),
 
         transforms.RandomApply([AddGaussianNoise(mean=0, std=1/255)], p=0.5),
